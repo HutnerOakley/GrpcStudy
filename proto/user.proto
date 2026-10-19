@@ -1,0 +1,8 @@
+syntax = "proto3";
+package proto;
+option go_package = "/proto";
+import "common.proto";
+
+service UserService {
+  rpc Refresh(Request)returns(Response){}
+}

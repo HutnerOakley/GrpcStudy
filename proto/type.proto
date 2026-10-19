@@ -1,0 +1,51 @@
+syntax = "proto3";
+package type_grpc;
+
+option go_package = "/type_grpc";
+
+service TypeService {
+  rpc Say(Request) returns(Response){}
+}
+
+
+message Request{
+  double a1 = 1;
+  float a2 = 2;
+  int32 a3 = 3;
+  uint32 a4 = 4;
+  uint64 a5 = 5;
+  sint32 a6 = 6;
+  sint64 a7 = 7;
+  fixed32 a8 = 8;
+  fixed64 a9 = 9;
+  sfixed32 a10 = 10;
+  sfixed64 a11 = 11;
+  bool a12 = 12;
+  string a13 = 13;
+  bytes a14 = 14;
+}
+
+message ArrayRequest{
+  repeated int64 a1 = 1;
+  repeated string a2 = 2;
+  repeated Request request_list = 3;
+}
+
+message MapRequest{
+  map<int64,string> m_i_s = 1;
+  map<string,bool> m_i_b = 2;
+  map<string,ArrayRequest> m_i_arr = 3;
+}
+
+message Q1{
+  message Q2{
+    string name2 = 2;
+  }
+  string name1 = 1;
+  Q2 q2 = 2;
+}
+
+
+message Response{
+
+}

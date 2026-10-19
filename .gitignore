@@ -1,0 +1,26 @@
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Go build and test output
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage*.txt
+coverage*.html
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# Files written by the file transfer examples
+/static/x.png
+/static/1.test.pdf
